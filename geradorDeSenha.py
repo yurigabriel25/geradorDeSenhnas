@@ -22,11 +22,7 @@ for sen in range(num):
         senhas += random.choice(chaves)
     print(senhas)
 
-with open("senhas.txt","w") as stream:
-    for x in senhas.split():
-        print(x, file=stream)
-    
-
-    
-        
-
+arquivo = open('genhas1','w')
+arquivo.write('Suas senhas:\n')
+arquivo.write('A seguinte senha foi gerada para ' + cont +': ' + senhas)
+arquivo.close()
