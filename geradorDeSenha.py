@@ -1,4 +1,5 @@
-import random 
+import random
+from webbrowser import open_new 
 
 print('Be-vindo ao seu gerador de senha.')
 
@@ -20,6 +21,10 @@ for sen in range(num):
     for c in range(comp):
         senhas += random.choice(chaves)
     print(senhas)
+
+with open("senhas.txt","w") as stream:
+    for x in senhas.split():
+        print(x, file=stream)
     
 
     
